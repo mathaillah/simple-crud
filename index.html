@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple CRUD application for managing contacts">
+    <title>Simple CRUD App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Manager</h1>
+    </header>
+    
+    <main>
+        <section class="contact-form-section">
+            <h2 id="form-heading" data-testid="form-heading">Add New Contact</h2>
+            <form id="contact-form" data-testid="contact-form" aria-labelledby="form-heading">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" data-testid="name-input" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" data-testid="email-input" required aria-required="true">
+                </div>
+                <button type="submit" data-testid="submit-button">Add Contact</button>
+                <button type="reset" id="reset-button" data-testid="reset-button">Reset</button>
+            </form>
+        </section>
+        
+        <section class="contact-list-section">
+            <h2 id="list-heading" data-testid="list-heading">Contact List</h2>
+            <div id="contact-list" data-testid="contact-list" aria-labelledby="list-heading" aria-live="polite">
+                <!-- Contacts will be dynamically added here -->
+                <p id="empty-message">No contacts yet. Add your first contact above!</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Simple CRUD App. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

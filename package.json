@@ -1,0 +1,16 @@
+{
+  "name": "simple-crud-app",
+  "version": "1.0.0",
+  "description": "A simple contact management CRUD application",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^24.3.0"
+  },
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:install": "playwright install"
+  }
+}
